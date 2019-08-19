@@ -1,9 +1,10 @@
 import React from 'react';
+import { StyledStartBtn } from './styles/StyledStartBtn';
 
 const StartBtn =({ callback }) => (
-    <div>
+    <StyledStartBtn>
         Start Game
-    </div>
+    </StyledStartBtn>
 )
 
 export default StartBtn;
