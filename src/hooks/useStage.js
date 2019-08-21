@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createStage } from '../gameHelpers';
 
-export const useStage = (player, setPlayer) => {
+export const useStage = (player, resetPlayer) => {
     const [stage, setStage] = useState(createStage());
     
     useEffect(() => {
@@ -20,7 +20,6 @@ export const useStage = (player, setPlayer) => {
                 });
             });
             return newStage;
-
         };
         setStage(prev => updateStage(prev))
     }, [player.collided, player.pos.x, player.pos.y, player.tetromino]);
