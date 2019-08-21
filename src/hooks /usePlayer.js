@@ -7,5 +7,5 @@ export const usePlayer = () => {
         tetromino: randomTetromino().shape,
         collided: false,
     });
-    return [player];
+    return [player]; 
 }
