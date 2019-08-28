@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bgImage from '../../img/bg.png';
+import bgImage from '../../img/diego.jpg';
 
 export const StyledWrapper = styled.div`
     width: 100vw;
