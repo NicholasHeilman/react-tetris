@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createStage, checkCollision } from '../gameHelpers';
+import '../components/styles/Tetris.css';
 
 //Components
 import Stage from "./Stage";
@@ -83,6 +84,11 @@ const Tetris = () => {
                 </div>
                 )};
                 <StartBtn callback={startGame}/>
+                <h3 className="controls">Controls</h3>
+                <h4 className="instructions"><img src="https://img.icons8.com/metro/26/000000/up--v2.png" alt=""/> - Rotate</h4>
+                <h4 className="instructions"><img src="https://img.icons8.com/metro/26/000000/long-arrow-left.png" alt=""/> - Move Left</h4>
+                <h4 className="instructions"><img src="https://img.icons8.com/metro/26/000000/long-arrow-right.png" alt=""/> - Move Right</h4>
+                <h4 className="instructions"><img src="https://img.icons8.com/metro/26/000000/down--v2.png" alt=""/> - Drop</h4>
             </aside>
             </StyledTetris>
         </StyledWrapper>
