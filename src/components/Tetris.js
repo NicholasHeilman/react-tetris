@@ -13,6 +13,7 @@ import { StyledWrapper, StyledTetris } from './styles/StyledTetris';
 //Custom Hooks
 import { usePlayer } from '../hooks/usePlayer';
 import { useStage } from '../hooks/useStage';
+import { useInterval } from '../hooks/useInterval';
 
 const Tetris = () => {
     const [dropTime, setDropTime] = useState(null);
@@ -33,6 +34,7 @@ const Tetris = () => {
     const startGame = () => {
         //reset game
         setStage(createStage());
+        setDropTime(1000);
         resetPlayer();
         setGameOver(false);
     }
@@ -68,6 +70,10 @@ const Tetris = () => {
             }
         }
     }
+
+    useInterval(() => {
+        drop();    
+    }, dropTime)
 
     return(
         <StyledWrapper role="button" tabIndex="0" onKeyDown={e => move(e)}>
