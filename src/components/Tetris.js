@@ -95,7 +95,10 @@ const Tetris = () => {
             <Stage stage={stage} />
             <aside>
                 {gameOver ? (
+                <div>
+                    <Display text={`Score: ${score}`} />
                     <Display gameOver={gameOver} text="Game Over" />
+                </div>
                 ) : (
                 <div>
                     <Display text={`Score: ${score}`} />
