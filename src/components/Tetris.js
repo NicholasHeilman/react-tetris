@@ -41,10 +41,10 @@ const Tetris = () => {
 
     const drop = () => {
         //increase level for evey 10 rows clearded
-        if(rows > (level +1)* 10){
+        if(rows > (level +1) * 10){
             setLevel(prev => prev + 1); 
         //increase drop speed for the level
-            setDropTime(1000 / (level +1) + 200);
+            setDropTime(1000 + ((level +1 ) * 500));
         }
         if(!checkCollision(player, stage, {x: 0, y: 1})){
             updatePlayerPos({ x: 0, y: 1, collided: false});
